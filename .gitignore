@@ -3,3 +3,4 @@ public/css/
 logs/
 .idea/
 .env
+dist
