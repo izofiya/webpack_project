@@ -1,0 +1,13 @@
+{
+  "name": "test-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Zoya Pleskatsevich",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^4.43.0"
+  }
+}
