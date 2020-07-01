@@ -34,7 +34,23 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [
+          "style-loader",
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true,
+              config: { path: "src/js/postcss.config.js" },
+            },
+          },
+        ],
       },
       {
         test: /\.s[ac]ss$/i,
@@ -45,6 +61,13 @@ module.exports = {
             loader: "css-loader",
             options: {
               sourceMap: true,
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true,
+              config: { path: "src/js/postcss.config.js" },
             },
           },
           {
